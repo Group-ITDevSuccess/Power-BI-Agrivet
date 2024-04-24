@@ -1,10 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/cors/jquery.postmessage-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/cors/jquery.xdr-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_fileupload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_microphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_okay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/fancy_webcam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/jquery.fancy-fileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/jquery.fileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/jquery.iframe-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fancy-file-uploader/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_777620_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_777777_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_cc0000_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/jquery-ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/font/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/font/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/font/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/font/summernote.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ar-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ar-AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ar-AR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-az-AZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-az-AZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-az-AZ.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-bg-BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-bg-BG.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-bg-BG.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ca-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ca-ES.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-cs-CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-cs-CZ.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-da-DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-da-DK.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-de-DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-de-DE.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-el-GR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-el-GR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-ES.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-EU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-EU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-es-EU.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fa-IR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fa-IR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fi-FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fi-FI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fi-FI.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fr-FR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-fr-FR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-gl-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-gl-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-gl-ES.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-he-IL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-he-IL.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hr-HR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hr-HR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hu-HU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-hu-HU.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-id-ID.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-id-ID.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-it-IT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-it-IT.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ja-JP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ja-JP.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ko-KR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ko-KR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LT.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LV.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-lt-LV.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-mn-MN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-mn-MN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-mn-MN.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nb-NO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nb-NO.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nl-NL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-nl-NL.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pl-PL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pl-PL.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-BR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-pt-PT.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ro-RO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ro-RO.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ru-RU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ru-RU.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sk-SK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sk-SK.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sl-SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sl-SI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sl-SI.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS-Latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS-Latin.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sr-RS.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sv-SE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-sv-SE.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ta-IN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ta-IN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-ta-IN.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-th-TH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-th-TH.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-tr-TR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-tr-TR.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uk-UA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uk-UA.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uz-UZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uz-UZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-uz-UZ.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-vi-VN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-vi-VN.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-CN.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/lang/summernote-zh-TW.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/plugin/hello/summernote-ext-hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-bs4.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote-lite.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.min.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/summernote/summernote.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap3.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap3.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap4.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap4.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap5.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bootstrap5.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bulma.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_bulma.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_materialize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_materialize.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_materialize.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_materialize.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_midnight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_midnight.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_midnight.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_midnight.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_modern.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_modern.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_modern.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_modern.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_semanticui.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_semanticui.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_simple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_simple.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_simple.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_simple.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site_dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site_dark.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site_dark.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/css/tabulator_site_dark.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/jquery_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/jspdf.plugin.autotable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/jspdf.umd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/luxon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator_esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator_esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator_esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/tabulator_esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/tabulator/dist/js/xlsx.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Firewall Authentication.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Firewall Authentication_files/css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/ID Motors.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/ID Rental.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo-inviso.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/smtp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/smtp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/503.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2fYCiwynk0KqAM4Z3YoaiBCHFMl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/templates",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates" />
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets" />
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist\js" />
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static" />
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="core" type="Python.DjangoServer" factoryName="Django server">
       <module name="core" />
@@ -31,4 +373,38 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="" />
+      <created>1713968755476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713968755476</updated>
+      <workItem from="1713968759381" duration="1723000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WfRunsListSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    }
+  ],
+  "lastFilter": {
+    "branch": "main",
+    "currentBranchFilter": true
+  }
+}]]></component>
 </project>
