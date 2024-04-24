@@ -1,6 +1,5 @@
 import uuid
 
-import pandas as pd
 import pyodbc
 import os
 import ldap3
