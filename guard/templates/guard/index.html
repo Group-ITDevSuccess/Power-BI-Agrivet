@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Administration
+{% endblock %}
+{% block style %}
+
+{% endblock %}
+{% block content %}
+    <main class="container-fluid mt-4">
+        <div class="card">
+            <div class="card-header">
+                Page Administration
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div id="container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        let editTickCross = function (cell, onRendered, success, cancel) {
+            {#let edited = cell.isEdited();#}
+            const rowData = cell.getRow().getData();
+            {#console.log("On a : " + edited + " d'ou : "+JSON.stringify(rowData))#}
+            let field = cell.getColumn().getField();
+            let value = cell.getValue();
+            let body = {
+                'uid': rowData.uid
+            }
+            body[field] = value
+
+            if (rowData.uid) {
+                fetch("{% url 'guard:update_user_json' %}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(body)
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(data => {
+                                alert(data.error);
+                                throw new Error(data.error); // Throw an error to stop further processing
+                            });
+                        }
+                        return response.json(); // Parse the JSON response for successful requests
+                    })
+                    .then(data => {
+                        if (data.success) {
+                            cell.getRow().update(rowData);
+                            reloadPage()
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error updating breakdown:", error);
+                        cancel()
+                    });
+            } else {
+                console.log("Mais: " + rowData)
+            }
+        }
+        let deleteUserRow = function (e, cell) {
+            let userId = cell.getData().uid;
+            if (userId) {
+                if (confirm("Est-vous sûr de vouloir supprimer ceci ?")) {
+                    fetch("{% url 'guard:delete_user_json' %}", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "X-CSRFToken": "{{ csrf_token }}"
+                        },
+                        body: JSON.stringify({'uid': userId})
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                table.deleteRow(cell.getRow());
+                            } else {
+                                console.error("Error deleting Breakdown:", data.error);
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error deleting Breakdown:", error);
+                        });
+                }
+
+            } else {
+                table.deleteRow(cell.getRow());
+            }
+        }
+        let table = new Tabulator('#container', {
+            ajaxURL: "{% url 'guard:get_all_users_json' %}",
+            ajaxContentType: "json",
+            rowHeight: 30,
+            resizableRows: true,
+            resizableRowGuide: true,
+            editorEmptyValue: '',
+            index: 'uid',
+            layout: "fitColumns",
+            tooltipsHeader: true,
+            headerSortClickElement: 'icon',
+            selectableRangeClearCells: true,
+            columnHeaderVertAlign: "bottom",
+            footerElement: `<button type='button' class='btn btn-warning btn-sm mr-2' id='reload-table' onClick="reloadPage()"><i class='fas fa-sync-alt'></i></button>`,
+            height: "40vw",
+            success: function (data) {
+                if (data.status !== 200 && data.status !== 201) {
+                    // Display error message in alert and prevent tickCross change
+                    alert(data.error || "An error occurred while fetching data.");
+                    return; // Exit the function if there's an error
+                }
+                table.setData(data.data);
+            },
+            renderHorizontal: "virtual",
+            resizableColumnGuide: true,
+            initialSort: [
+                {column: "username", dir: "asc"},
+            ],
+            placeholder: "Aucun Donnée",
+            placeholderHeaderFilter: 'Aucun Donnée Correspondent',
+            headerSort: true,
+            columnDefaults: {
+                tooltip: true,
+                headerHozAlign: "center",
+                editor: false,
+                resizable: "header",
+            },
+            rowFormatter: function (row) {
+                const rowData = row.getData();
+                const access = rowData.access;
+
+                if (access) {
+                    row.getElement().style.backgroundColor = "#1e3b20"; // Add 'active-row' class
+
+                } else {
+                    row.getElement().style.backgroundColor = "#3b1e2b"; //
+                }
+            },
+            rowHeader: {
+                title: `<button type='button' class='btn btn-primary btn-sm mr-2' id='add-row' onclick="addRow()"
+                {% if not user.is_superuser %}disabled{% endif %}><i class='fas fa-plus'></i></button>`,
+                headerSort: false,
+                resizable: false,
+                frozen: true,
+                rowHandle: true,
+                editor: false,
+                width: 45,
+
+                formatter: "handle",
+            },
+            groupBy: function (rowData) {
+                let rowAutoriser = rowData.access;
+
+                let val;
+                if (rowAutoriser) {
+                    val = 'Autoriser';
+                } else {
+                    val = 'Non Autoriser';
+                }
+                return val || "Nouveaux";
+            },
+            groupHeader: function (value, count, data, group) {
+                return value + "<span >(" + count + " personnes)</span>";
+            },
+            columns: [
+                {
+                    title: "N°",
+                    resizable: false,
+                    formatter: "rownum",
+                    hozAlign: "center",
+                    width: 40,
+                    sorter: "number",
+                    editor: false,
+                    frozen: true,
+                    download: false,
+                    headerSort: false,
+                },
+                {
+                    title: "Identifiant",
+                    field: "username",
+                    width: 100,
+                },
+                {
+                    title: "Nom",
+                    field: "first_name",
+                    editor: false,
+                    width: 125,
+                },
+                {
+                    title: "Prénom",
+                    field: "last_name",
+                    editor: false,
+                    width: 175,
+                },
+                {
+                    title: "<code>*</code> Autoriser",
+                    field: 'access',
+                    hozAlign: "center",
+                    formatter: "tickCross",
+                    editor: true,
+                    headerSort: false,
+                    cellEdited: editTickCross
+                },
+                {% if user.is_superuser %}
+                    {
+                        title: "Staff",
+                        resizable: false,
+                        field: 'is_staff',
+                        hozAlign: "center",
+                        formatter: "tickCross",
+                        headerSort: false,
+                        editor: true,
+                        cellEdited: editTickCross
+                    },
+                    {
+                        title: "Super Utilisateur",
+                        resizable: false,
+                        field: 'is_superuser',
+                        hozAlign: "center",
+                        formatter: "tickCross",
+                        headerSort: false,
+                        editor: true,
+                        cellEdited: editTickCross
+                    },
+                    {
+                        formatter: function (cell, formatterParams) {
+                            return "<i class='fa fa-trash'></i>";
+                        },
+                        headerSort: false,
+                        frozen: true,
+                        resizable: false,
+                        width: 40,
+                        hozAlign: "center",
+                        {% if user.is_superuser %}
+                            cellClick: deleteUserRow
+                        {% endif %}
+                    }
+                {% endif %}
+            ]
+        })
+    </script>
+{% endblock %}

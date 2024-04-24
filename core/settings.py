@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guard.apps.GuardConfig',
+
+    'apps.home.apps.HomeConfig'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
