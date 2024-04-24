@@ -27,8 +27,8 @@ def index(request):
 @login_required
 @csrf_exempt
 def all_users_json(request):
-    users = CustomUser.objects.all().annotate(id=F('uid')).values(
-        'id', 'username', 'first_name', 'last_name', 'email',
+    users = CustomUser.objects.all().values(
+        'uid', 'username', 'first_name', 'last_name', 'email',
         'access',
         'is_active',
         'is_staff', 'is_superuser', 'date_joined'
@@ -42,14 +42,14 @@ def all_users_json(request):
 @csrf_exempt
 def update_user_json(request):
     data = json.loads(request.body)
-    uid = are_valid_uuids(data.get('id', None))
+    uid = are_valid_uuids(data.get('uid', None))
     message = "Uid est Null !"
     # print(request.body)
     if uid is not None:
         try:
             user = CustomUser.objects.get(uid__exact=uid)
             for key, value in data.items():
-                if key not in ['id', 'date_joined']:
+                if key not in ['uid', 'date_joined']:
                     if value == 'true':
                         value = True
                     elif value == 'false':
@@ -68,10 +68,11 @@ def update_user_json(request):
 @login_required
 @csrf_exempt
 def create_user_json(request):
-    uid = uuid.uuid4()
+    data = json.loads(request.body.decode('utf-8'))
     try:
-        user, created = CustomUser.objects.get_or_create(uid__exact=uid)
-        if created:
+        username = data.get('username', None)
+        if username:
+            user, created = CustomUser.objects.get_or_create(username=username)
             for key, value in request.POST.items():
                 if value == 'true':
                     value = True
@@ -79,8 +80,8 @@ def create_user_json(request):
                     value = False
                 setattr(user, key, value)
             user.save()
-            data = list(CustomUser.objects.filter(uid__exact=user.uid).annotate(id=F('uid')).values(
-                'id', 'username', 'first_name', 'last_name',
+            data = list(CustomUser.objects.filter(uid__exact=user.uid).values(
+                'uid', 'username', 'first_name', 'last_name',
                 'access',
                 'is_active',
                 'is_staff', 'is_superuser',

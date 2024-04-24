@@ -16,7 +16,7 @@
                         class="sr-only">(current)</span></a>
             </li>
             {% if user.is_staff %}
-                <li class="nav-item {% if path == '/accounts/administrations/' %}active{% endif %} disabled" disabled>
+                <li class="nav-item {% if path == '/accounts/administrations/' %}active{% endif %}" >
                     <a class="nav-link " href="{% url 'guard:index' %}" tabindex="-1">Administration</a>
                 </li>
             {% endif %}

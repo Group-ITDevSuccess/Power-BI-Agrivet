@@ -39,6 +39,18 @@
 <script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'dist/js/bootstrap-select.min.js' %}"></script>
 <script src="{% static 'assets/tabulator/dist/js/tabulator.min.js' %}"></script>
-{% block script %}{% endblock %}
+<script type="text/javascript">
+    let addRow = function () {
+        let newRowData = {};
+        table.addRow(newRowData, false);
+    }
+
+    function reloadPage() {
+        window.location.reload();
+    }
+</script>
+{% block script %}
+
+{% endblock %}
 </body>
 </html>
