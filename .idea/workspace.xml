@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guard/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/guard/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guard/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/guard/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/guard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guard/templates/guard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/guard/templates/guard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guard/templates/guard/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/guard/templates/guard/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -45,13 +46,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.core.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/templates",
+    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/templates/partials",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,6 +67,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates\partials" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist\js" />
@@ -82,6 +86,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="core.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -115,12 +120,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713968755476</updated>
-      <workItem from="1713968759381" duration="2635000" />
+      <workItem from="1713968759381" duration="5285000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [
