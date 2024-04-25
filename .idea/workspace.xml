@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guard/templates/guard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/guard/templates/guard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +44,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2fYCiwynk0KqAM4Z3YoaiBCHFMl" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,12 +60,14 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "Django Server.core.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-pythonsecurity.checker": "pythonsecurity.checker",
+    "Notification.DoNotAsk-pythonsecurity.checker": "true",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/templates/partials",
+    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/static/assets",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,9 +80,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates\partials" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates" />
-      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist\js" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist" />
     </key>
@@ -118,6 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713968755476</updated>
       <workItem from="1713968759381" duration="13407000" />
+      <workItem from="1714018275511" duration="2855000" />
     </task>
     <servers />
   </component>
@@ -129,6 +146,10 @@
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
     {
       "branch": "main",
       "currentBranchFilter": true

@@ -5,7 +5,7 @@
     Administration
 {% endblock %}
 {% block style %}
-
+    <link rel="stylesheet" href="{% static 'assets/tabulator/dist/css/tabulator_site_dark.min.css' %}">
 {% endblock %}
 {% block body %}
     <main class="container-fluid mt-4">
@@ -20,6 +20,7 @@
     </main>
 {% endblock %}
 {% block script %}
+    <script src="{% static 'assets/tabulator/dist/js/tabulator.min.js' %}"></script>
     <script type="text/javascript">
         let requestAjax = function (cell, success, cancel, url) {
             let field = cell.getColumn().getField();
