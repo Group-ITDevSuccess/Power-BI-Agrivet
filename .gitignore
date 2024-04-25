@@ -154,3 +154,6 @@ cython_debug/
 .github/
 module/
 media/
+.idea/workspace.xml
+/.idea
+*.xml

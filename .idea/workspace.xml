@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guard/templates/guard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/guard/templates/guard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/w2ui-1.5/w2ui-1.5.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -134,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713968755476</updated>
       <workItem from="1713968759381" duration="13407000" />
-      <workItem from="1714018275511" duration="2855000" />
+      <workItem from="1714018275511" duration="3771000" />
     </task>
     <servers />
   </component>
