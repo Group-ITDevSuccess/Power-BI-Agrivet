@@ -156,3 +156,4 @@ cython_debug/
 module/
 media/
 *.xml
+.idea/workspace.xml

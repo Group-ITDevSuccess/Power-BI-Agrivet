@@ -37,15 +37,15 @@
                             {id: 'grid8020', text: '8020', icon: 'fas fa-list-alt'},
                             {id: 'html', text: 'Synthèse', icon: 'fas fa-list-alt'},
                         ],
-                        onCollapse(event){
+                        onCollapse(event) {
                             event.preventDefault()
                         }
                     }
                 ],
-                onFlat(event){
+                onFlat(event) {
                     layout.sizeTo('left', (event.detail.goFlat ? 35 : 200), true)
                 },
-                onClick(event){
+                onClick(event) {
                     switch (event.target) {
                         case 'grid2080':
                             layout.html('main', grid2080)
@@ -62,8 +62,53 @@
             },
             grid2080: {
                 name: 'grid2080',
+                box: '#grid2080',
+                url: '',
+                method: 'GET',
+                header: 'Liste des 2080',
+                sortData: [{field: 'departement', direction: 'asc'}],
+                show: {
+                    header: true,
+                    footer: true,
+                    toolbar: true,
+                    toolbarSave: true,
+                    lineNumbers: true
+                },
+                searches: [
+                    {type: 'text', field: 'departement', label: 'Département'},
+                    {type: 'text', field: 'famille', label: 'Famille'},
+                    {type: 'text', field: 'article', label: 'Article'},
+                    {type: 'text', field: 'designation', label: 'Désignation'},
+                ],
+                onExpand(event) {
+                    query('#' + event.detail.box_id).html('<div style="padding: 10px; height: 100px">Expanded content</div>')
+                },
+                columnGroups: [
+                    {#{text: '', master: true},#}
+                    {text: 'INFORMATION', span: 5},
+                    {text: 'PTA', span: 6},
+                    {text: 'Réalisation ', span: 6}
+                ],
                 columns: [
-                    {field: ''}
+                    {field: 'departement', text: 'Département', sortable: true, resizable: true},
+                    {field: 'famille', text: 'Famille', sortable: true, resizable: true},
+                    {field: 'article', text: 'Article', sortable: true, resizable: true},
+                    {field: 'designation', text: 'Désignation', sortable: true, resizable: true},
+                    {field: 'type', text: 'Import / Local',attr: 'align=center', sortable: true, resizable: true},
+
+                    {field: 'qte_pta', text: 'Qté'},
+                    {field: 'pmp_pta', text: 'PMP'},
+                    {field: 'pdv_pta', text: 'PDV'},
+                    {field: 'marge_pta', text: 'Marge'},
+                    {field: 'pourcentage_marge_pta', text: '% marge'},
+                    {field: 'ca_ht_pta', text: '% marge'},
+
+                    {field: 'qte_realisation', text: 'Qté'},
+                    {field: 'pmp_realisation', text: 'PMP'},
+                    {field: 'pdv_realisation', text: 'PDV'},
+                    {field: 'marge_realisation', text: 'Marge'},
+                    {field: 'pourcentage_marge_realisation', text: '% marge'},
+                    {field: 'ca_ht_realisation', text: '% marge'},
                 ]
             },
             grid8020: {
