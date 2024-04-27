@@ -89,26 +89,71 @@
                     {text: 'PTA', span: 6},
                     {text: 'Réalisation ', span: 6}
                 ],
+                toolbar: {
+                    items: [
+                        {id: 'add', type: 'button', text: 'Ajouter', icon: 'w2ui-icon-plus'},
+                        {type: 'break'},
+                        {type: 'button', id: 'showChanges', text: 'Historique'}
+                    ],
+                    onClick(event) {
+                        if (event.target === 'add') {
+                            console.log('add')
+                            let recid = grid2080.records.length + 1
+                            this.owner.add({recid});
+                            this.owner.scrollIntoView(recid);
+                            this.owner.editField(recid, 1)
+                        }
+
+                    }
+                },
                 columns: [
-                    {field: 'departement', text: 'Département', sortable: true, resizable: true},
-                    {field: 'famille', text: 'Famille', sortable: true, resizable: true},
-                    {field: 'article', text: 'Article', sortable: true, resizable: true},
-                    {field: 'designation', text: 'Désignation', sortable: true, resizable: true},
-                    {field: 'type', text: 'Import / Local',attr: 'align=center', sortable: true, resizable: true},
+                    {
+                        field: 'departement',
+                        text: 'Département',
+                        sortable: true,
+                        resizable: true,
+                        editable: {type: 'text'}
+                    },
+                    {field: 'famille', text: 'Famille', sortable: true, resizable: true, editable: {type: 'text'}},
+                    {field: 'article', text: 'Article', sortable: true, resizable: true, editable: {type: 'text'}},
+                    {
+                        field: 'designation',
+                        text: 'Désignation',
+                        sortable: true,
+                        resizable: true,
+                        editable: {type: 'text'}
+                    },
+                    {
+                        field: 'type', text: 'Import / Local', size: '100px', sortable: true, resizable: true,
+                        editable: {
+                            type: 'list', items: [
+                                {id: 1, text: 'Import'},
+                                {id: 2, text: 'Local'},
+                            ], showAll: true, openOnFocus: true, align: 'left'
+                        },
+                        render(record, extra) {
+                            return extra.value?.text || '';
+                        }
+                    },
 
-                    {field: 'qte_pta', text: 'Qté'},
-                    {field: 'pmp_pta', text: 'PMP'},
-                    {field: 'pdv_pta', text: 'PDV'},
-                    {field: 'marge_pta', text: 'Marge'},
-                    {field: 'pourcentage_marge_pta', text: '% marge'},
-                    {field: 'ca_ht_pta', text: '% marge'},
+                    {field: 'qte_pta', text: 'Qté', editable: {type: 'money'}, render: 'money'},
+                    {field: 'pmp_pta', text: 'PMP', editable: {type: 'money'}, render: 'money'},
+                    {field: 'pdv_pta', text: 'PDV', editable: {type: 'money'}, render: 'money'},
+                    {field: 'marge_pta', text: 'Marge', editable: {type: 'money'}, render: 'money'},
+                    {field: 'pourcentage_marge_pta', text: '% marge', editable: {type: 'money'}, render: 'money'},
+                    {field: 'ca_ht_pta', text: '% marge', editable: {type: 'money'}, render: 'money'},
 
-                    {field: 'qte_realisation', text: 'Qté'},
-                    {field: 'pmp_realisation', text: 'PMP'},
-                    {field: 'pdv_realisation', text: 'PDV'},
-                    {field: 'marge_realisation', text: 'Marge'},
-                    {field: 'pourcentage_marge_realisation', text: '% marge'},
-                    {field: 'ca_ht_realisation', text: '% marge'},
+                    {field: 'qte_realisation', text: 'Qté', editable: {type: 'money'}, render: 'money'},
+                    {field: 'pmp_realisation', text: 'PMP', editable: {type: 'money'}, render: 'money'},
+                    {field: 'pdv_realisation', text: 'PDV', editable: {type: 'money'}, render: 'money'},
+                    {field: 'marge_realisation', text: 'Marge', editable: {type: 'money'}, render: 'money'},
+                    {
+                        field: 'pourcentage_marge_realisation',
+                        text: '% marge',
+                        editable: {type: 'money'},
+                        render: 'money'
+                    },
+                    {field: 'ca_ht_realisation', text: '% marge', editable: {type: 'money'}, render: 'money'},
                 ]
             },
             grid8020: {
@@ -126,5 +171,6 @@
         layout.render('#main');
         layout.html('left', sidebar)
         layout.html('main', grid2080)
+
     </script>
 {% endblock %}
