@@ -157,3 +157,6 @@ module/
 media/
 *.xml
 .idea/workspace.xml
+/.idea
+.idea/workspace.xml
+*.xml
