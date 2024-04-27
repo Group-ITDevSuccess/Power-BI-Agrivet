@@ -27,25 +27,59 @@
                 flatButton: true,
                 nodes: [
                     {
-                        id: 'general', 
-                        text: 'General', 
-                        group: true, 
-                        expanded: true, 
+                        id: 'general',
+                        text: 'General',
+                        group: true,
+                        expanded: true,
                         groupShowHide: false,
                         nodes: [
-                            {id: 'grid1', text: '20'}
-                        ]
+                            {id: 'grid2080', text: '2080', icon: 'fas fa-list-alt', selected: true},
+                            {id: 'grid8020', text: '8020', icon: 'fas fa-list-alt'},
+                            {id: 'html', text: 'Synthèse', icon: 'fas fa-list-alt'},
+                        ],
+                        onCollapse(event){
+                            event.preventDefault()
+                        }
                     }
+                ],
+                onFlat(event){
+                    layout.sizeTo('left', (event.detail.goFlat ? 35 : 200), true)
+                },
+                onClick(event){
+                    switch (event.target) {
+                        case 'grid2080':
+                            layout.html('main', grid2080)
+                            break
+                        case 'grid8020':
+                            layout.html('main', grid8020)
+                            break
+                        case 'html':
+                            layout.html('main', '<div style="padding: 10px">Page de Synthèse</div>')
+                            query(layout.el('main')).css('border-left', '1px solid #efefef')
+                            break
+                    }
+                }
+            },
+            grid2080: {
+                name: 'grid2080',
+                columns: [
+                    {field: ''}
+                ]
+            },
+            grid8020: {
+                name: 'grid2080',
+                columns: [
+                    {field: ''}
                 ]
             }
         }
 
         let layout = new w2layout(config.layout);
         let sidebar = new w2sidebar(config.sidebar);
-        {#let grid1 = new w2grid(config.grid1);#}
-        {#let grid2 = new w2grid(config.grid2);#}
+        let grid2080 = new w2grid(config.grid2080);
+        let grid8020 = new w2grid(config.grid8020);
         layout.render('#main');
         layout.html('left', sidebar)
-        {#layout.html('main', grid1)#}
+        layout.html('main', grid2080)
     </script>
 {% endblock %}
