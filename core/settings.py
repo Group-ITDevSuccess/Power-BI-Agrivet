@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guard.apps.GuardConfig',
-
     'apps.home.apps.HomeConfig',
     'django_browser_reload',
 

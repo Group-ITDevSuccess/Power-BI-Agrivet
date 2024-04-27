@@ -5,12 +5,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'assets/w2ui/w2ui-2.0.min.css' %}">
 {% endblock %}
 {% block body %}
-    <main id="main" class="mt-3" style="width: 100vw; height: 80vh;"></main>
+    <main id="main" class="mt-3" style="width: 100vw; height: 85vh;"></main>
 {% endblock %}
 {% block script %}
     <script src="{% static 'dist/js/jquery.min.js' %}"></script>
     <script type="module">
-        import {w2layout, w2sidebar, w2grid} from "{% static 'assets/w2ui/w2ui-2.0.es6.min.js' %}";
+        import {w2layout, w2sidebar, w2grid, w2popup, query} from "{% static 'assets/w2ui/w2ui-2.0.es6.min.js' %}";
 
         // widget configuration
         let config = {
@@ -61,19 +61,24 @@
                 }
             },
             grid2080: {
-                name: 'grid2080',
-                box: '#grid2080',
+                name: 'grid',
+                box: '#grid',
                 url: '',
                 method: 'GET',
+                liveSearch: true,
                 header: 'Liste des 2080',
                 sortData: [{field: 'departement', direction: 'asc'}],
                 show: {
                     header: true,
                     footer: true,
                     toolbar: true,
+                    toolbarAdd: true,
                     toolbarSave: true,
-                    lineNumbers: true
+                    lineNumbers: true,
+                    orderColumn: true,
+                    {#expandColumn: true#}
                 },
+                {#reorderRows: true,#}
                 searches: [
                     {type: 'text', field: 'departement', label: 'Département'},
                     {type: 'text', field: 'famille', label: 'Famille'},
@@ -85,14 +90,14 @@
                 },
                 columnGroups: [
                     {#{text: '', master: true},#}
-                    {text: 'INFORMATION', span: 5},
+                    {text: 'INFORMATION', span: 5, frozen: true},
                     {text: 'PTA', span: 6},
                     {text: 'Réalisation ', span: 6}
                 ],
                 toolbar: {
                     items: [
-                        {id: 'add', type: 'button', text: 'Ajouter', icon: 'w2ui-icon-plus'},
-                        {type: 'break'},
+                        {#{id: 'add', type: 'button', text: 'Ajouter', icon: 'w2ui-icon-plus'},#}
+                        {#{type: 'break'},#}
                         {type: 'button', id: 'showChanges', text: 'Historique'}
                     ],
                     onClick(event) {
@@ -103,28 +108,74 @@
                             this.owner.scrollIntoView(recid);
                             this.owner.editField(recid, 1)
                         }
+                        if (event.target === 'showChanges') {
+                            showChanged()
+                        }
 
                     }
+                },
+                onSave: function (event) {
+                    console.log(event.detail.changes);
+
+                    console.log(event);
+                },
+                onAdd: function (event) {
+                    console.log(event)
+
+                    let recid = grid2080.records.length + 1
+                    event.owner.add({recid});
+                    event.owner.scrollIntoView(recid);
+                    event.owner.editField(recid, 0)
                 },
                 columns: [
                     {
                         field: 'departement',
                         text: 'Département',
                         sortable: true,
+                        size: '120px',
                         resizable: true,
-                        editable: {type: 'text'}
+                        editable: {type: 'text'},
+                        frozen: true,
+                        searchable: {operator: 'contains'}
                     },
-                    {field: 'famille', text: 'Famille', sortable: true, resizable: true, editable: {type: 'text'}},
-                    {field: 'article', text: 'Article', sortable: true, resizable: true, editable: {type: 'text'}},
+                    {
+                        field: 'famille',
+                        text: 'Famille',
+                        sortable: true,
+                        size: '120px',
+                        resizable: true,
+                        frozen: true,
+                        editable: {type: 'text'},
+                        searchable: {operator: 'contains'}
+                    },
+                    {
+                        field: 'article',
+                        text: 'Article',
+                        sortable: true,
+                        size: '120px',
+                        resizable: true,
+                        frozen: true,
+                        editable: {type: 'text'},
+                        searchable: {operator: 'contains'},
+                        clipboardCopy: "Copier le N° Article"
+                    },
                     {
                         field: 'designation',
                         text: 'Désignation',
+                        size: '150px',
                         sortable: true,
                         resizable: true,
-                        editable: {type: 'text'}
+                        frozen: true,
+                        editable: {type: 'text'},
+                        searchable: {operator: 'contains'}
                     },
                     {
-                        field: 'type', text: 'Import / Local', size: '100px', sortable: true, resizable: true,
+                        field: 'type',
+                        text: 'Import / Local',
+                        size: '100px',
+                        sortable: true,
+                        resizable: true,
+                        frozen: true,
                         editable: {
                             type: 'list', items: [
                                 {id: 1, text: 'Import'},
@@ -135,25 +186,122 @@
                             return extra.value?.text || '';
                         }
                     },
-
-                    {field: 'qte_pta', text: 'Qté', editable: {type: 'money'}, render: 'money'},
-                    {field: 'pmp_pta', text: 'PMP', editable: {type: 'money'}, render: 'money'},
-                    {field: 'pdv_pta', text: 'PDV', editable: {type: 'money'}, render: 'money'},
-                    {field: 'marge_pta', text: 'Marge', editable: {type: 'money'}, render: 'money'},
-                    {field: 'pourcentage_marge_pta', text: '% marge', editable: {type: 'money'}, render: 'money'},
-                    {field: 'ca_ht_pta', text: '% marge', editable: {type: 'money'}, render: 'money'},
-
-                    {field: 'qte_realisation', text: 'Qté', editable: {type: 'money'}, render: 'money'},
-                    {field: 'pmp_realisation', text: 'PMP', editable: {type: 'money'}, render: 'money'},
-                    {field: 'pdv_realisation', text: 'PDV', editable: {type: 'money'}, render: 'money'},
-                    {field: 'marge_realisation', text: 'Marge', editable: {type: 'money'}, render: 'money'},
+                    {
+                        field: 'qte_pta',
+                        text: 'Qté',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'pmp_pta',
+                        text: 'PMP',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'pdv_pta',
+                        text: 'PDV',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'marge_pta',
+                        text: 'Marge',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'pourcentage_marge_pta',
+                        text: '% marge',
+                        size: '100px',
+                        editable: {type: 'percent', precision: 1, min: 0, max: 100},
+                        render: 'percent'
+                    },
+                    {
+                        field: 'ca_ht_pta',
+                        text: '% marge',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'qte_realisation',
+                        text: 'Qté',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'pmp_realisation',
+                        text: 'PMP',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money'
+                    },
+                    {
+                        field: 'pdv_realisation',
+                        text: 'PDV',
+                        size: '100px',
+                        editable: {type: 'money', currencySuffix: '€'},
+                        render: 'money'
+                    },
+                    {
+                        field: 'marge_realisation',
+                        text: 'Marge',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: 'money',
+                    },
                     {
                         field: 'pourcentage_marge_realisation',
                         text: '% marge',
-                        editable: {type: 'money'},
-                        render: 'money'
+                        size: '100px',
+                        editable: {type: 'percent', precision: 1, min: 0, max: 100},
+                        render: 'percent'
                     },
-                    {field: 'ca_ht_realisation', text: '% marge', editable: {type: 'money'}, render: 'money'},
+                    {
+                        field: 'ca_ht_realisation',
+                        text: '% marge',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    },
+                    {
+                        field: 'ecart_qte',
+                        text: 'Ecart Qte',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    },
+                    {
+                        field: 'pourcentage_ecart_qte',
+                        text: 'Ecart Qte (%)',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    }, {
+                        field: 'ecart_ca_ht',
+                        text: 'Ecart CA HT',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    }, {
+                        field: 'pourcentage_ecart_ca_ht',
+                        text: 'Ecart CA HT (%)',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    }, {
+                        field: 'stock_prevision',
+                        text: 'Stock Prev',
+                        size: '100px',
+                        editable: {type: 'money', groupSymbol: ' ', currencyPrefix: '', currencySuffix: ''},
+                        render: {type: 'money'}
+                    },
                 ]
             },
             grid8020: {
@@ -172,5 +320,16 @@
         layout.html('left', sidebar)
         layout.html('main', grid2080)
 
+        window.showChanged = function () {
+            w2popup.open({
+                title: 'Historique',
+                with: 600,
+                height: 550,
+                body: `<pre>${JSON.stringify(grid2080.getChanges(), null, 4)}</pre>`,
+                actions: {Ok: w2popup.close}
+            })
+        }
+        grid2080.stateSave();
+        grid8020.stateSave();
     </script>
 {% endblock %}

@@ -7,6 +7,7 @@
     <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +150,8 @@
       <workItem from="1713968759381" duration="13407000" />
       <workItem from="1714018275511" duration="5031000" />
       <workItem from="1714197341378" duration="1234000" />
+      <workItem from="1714199411437" duration="1314000" />
+      <workItem from="1714201423771" duration="8369000" />
     </task>
     <servers />
   </component>
@@ -160,6 +163,14 @@
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
     {
       "branch": "main",
       "currentBranchFilter": true
