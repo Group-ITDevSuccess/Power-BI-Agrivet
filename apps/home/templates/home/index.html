@@ -10,34 +10,43 @@
 {% block script %}
     <script src="{% static 'dist/js/jquery.min.js' %}"></script>
     <script type="module">
-        import {query, w2grid, w2layout, w2popup, w2sidebar, w2utils} from "{% static 'assets/w2ui/w2ui-2.0.es6.min.js' %}";
+        import {
+            query,
+            w2grid,
+            w2layout,
+            w2popup,
+            w2sidebar,
+            w2utils,
+            w2alert
+        } from "{% static 'assets/w2ui/w2ui-2.0.es6.min.js' %}";
 
-        // widget configuration
-        function grid(value){
-            return  {
-                name: 'grid',
+        let typeHebdo = [
+            {id: 1, text: 'Import'},
+            {id: 2, text: 'Local'},
+        ]
+
+        function grid(value) {
+            return {
+                name: value,
                 url: {
                     get: "{% url 'home:get_all_hebdo' %}",
-                    remove: '',
-                    save: ''
+                    remove: "{% url 'home:delete_hebdo_by_uid' %}",
+                    save: "{% url 'home:create_or_update_hebdo' %}"
                 },
                 dataType: 'JSON',
-                routeData: { id: 14 },
-
                 postData: {
                     category: `${value}`,
                 },
                 recid: 'uid',
-                autoLoad: true,
-                /*
-                parser: function (responseText) {
-                    // do other things
-                    return this.parseJSON(responseText);
-                },*/
+                method: 'POST',
+
+                autoLoad: false,
                 liveSearch: true,
+                currencyPrefix: "Ar",
+                multiSearch: true,
                 multiSelect: true,
                 keyboard: true,
-                header: 'Liste des '+value,
+                header: 'Liste des ' + value,
                 msgNotJSON: "Les données reçu n'est pas en JSON",
                 msgDelete: 'Est-vous sûr de vouloir supprimer ?',
                 msgEmpty: 'Aucun donnée',
@@ -45,7 +54,7 @@
                 msgNeedReload: 'Reload Nécessaire...',
                 msgRefresh: 'Rafraichissement...',
                 msgServerError: 'Erreur Serveur !',
-                sortData: [{field: 'department', direction: 'asc'}],
+                sortData: [{field: 'department_name', direction: 'asc'}],
                 buttons: {
                     'reload': {
                         type: 'button',
@@ -53,23 +62,7 @@
                         tooltip: w2utils.lang('Rafraichir les données')
                     },
                     'columns': {
-                        type: 'drop',
-                        img: 'icon-columns',
                         tooltip: w2utils.lang('Afficher/Cacher colonne'),
-                        arrow: true,
-                        html: ''
-                    },
-                    'search': {
-                        type: 'html',
-                        html: '<div class="w2ui-icon icon-search-down w2ui-search-down" ' +
-                            '    title="' + w2utils.lang('Champs de Rechercher') + '" ' +
-                            '    onclick="let obj = w2ui[$(this).parents(\'div.w2ui-grid\').attr(\'name\')]; ' +
-                            '    obj.searchShowFields(this);"></div>'
-                    },
-                    'search-go': {
-                        type: 'check',
-                        text: w2utils.lang('Chercher...'),
-                        tooltip: w2utils.lang('Ouvrir et Chercher')
                     },
                     'add': {
                         type: 'button',
@@ -130,13 +123,15 @@
                 },
                 columnTooltip: 'bottom',
                 searches: [
-                    {type: 'text', field: 'department', label: 'Département'},
-                    {type: 'text', field: 'famille', label: 'Famille'},
+                    {type: 'text', field: 'department_name', label: 'Département'},
+                    {type: 'text', field: 'family_name', label: 'Famille'},
                     {type: 'text', field: 'article', label: 'Article'},
                     {type: 'text', field: 'designation', label: 'Désignation'},
                     {
                         field: 'type', text: 'Import/Local', type: 'list',
-                        options: {items: ['Import', 'Local']}
+                        options: {
+                            items: typeHebdo
+                        }
                     },
                 ],
                 onExpand(event) {
@@ -150,52 +145,41 @@
                 ],
                 toolbar: {
                     items: [
-                        {#{id: 'add', type: 'button', text: 'Ajouter', icon: 'w2ui-icon-plus'},#}
-                        {#{type: 'break'},#}
                         {type: 'button', id: 'showChanges', text: 'Historique'}
                     ],
                     onClick(event) {
-                        if (event.target === 'add') {
-                            {#console.log('add')#}
-                            let recid = this.records.length + 1
-                            this.owner.add({recid});
-                            this.owner.scrollIntoView(recid);
-                            this.owner.editField(recid, 1)
-                        }
                         if (event.target === 'showChanges') {
-                            showChanged()
+                            showChanged(value)
                         }
-
                     }
                 },
-                onSave: function (event) {
-                    {#console.log(event.detail.changes);#}
-
-                    {#console.log(event);#}
-                },
                 onAdd: function (event) {
-                    {#console.log(event)#}
 
-                    let recid = this.records.length + 1
-                    event.owner.add({recid});
-                    event.owner.scrollIntoView(recid);
-                    event.owner.editField(recid, 0)
-                },
-                onChange: function (event) {
-                    {#console.log(event);#}
-                },
-                onEdit: function (event) {
-                    {#console.log(event);#}
-                },
-                onDelete: function (event) {
-                    {#console.log(event);#}
-                },
-                onDestroy: function (event) {
-                    console.log('object ' + event.target + ' is destroyed');
+                    fetch("{% url 'home:generate_uid' %}", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "X-CSRFToken": "{{ csrf_token }}"
+                        },
+                        body: new URLSearchParams({
+                            'category': value,
+                        })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            let uid = data;
+                            event.owner.add({'uid': data['uid'], 'category': data['category']});
+                            event.owner.scrollIntoView(uid);
+                            event.owner.editField(uid, 0)
+                        })
+                        .catch(error => {
+                            console.error("Error deleting Breakdown:", error);
+                            showAlert()
+                        });
                 },
                 columns: [
                     {
-                        field: 'department',
+                        field: 'department_name',
                         text: 'Département',
                         sortable: true,
                         size: '120px',
@@ -205,7 +189,7 @@
                         searchable: {operator: 'contains'}
                     },
                     {
-                        field: 'family',
+                        field: 'family_name',
                         text: 'Famille',
                         sortable: true,
                         size: '120px',
@@ -243,12 +227,17 @@
                         resizable: true,
                         frozen: true,
                         editable: {
-                            type: 'list', items: [
-                                {id: 1, text: 'Import'},
-                                {id: 2, text: 'Local'},
-                            ], showAll: true, openOnFocus: true, align: 'left'
+                            type: 'list', items: typeHebdo, showAll: true, openOnFocus: true, align: 'left'
                         },
                         render(record, extra) {
+                            switch (parseInt(extra.value)) {
+                                case 1:
+                                    extra.value = {id: 1, text: 'Import'}
+                                    break
+                                case 2:
+                                    extra.value = {id: 2, text: 'Local'}
+                                    break
+                            }
                             return extra.value?.text || '';
                         }
                     },
@@ -427,6 +416,7 @@
                 ]
             }
         }
+
         let config = {
             layout: {
                 name: 'layout',
@@ -485,20 +475,35 @@
         let sidebar = new w2sidebar(config.sidebar);
         let grid2080 = new w2grid(config.grid2080);
         let grid8020 = new w2grid(config.grid8020);
+
         layout.render('#main');
         layout.html('left', sidebar)
         layout.html('main', grid2080)
 
-        window.showChanged = function () {
+        {#grid2080.localSearch()#}
+        {#grid8020.localSearch()#}
+
+        window.showChanged = function (value) {
+            console.log(value)
+            let target;
+            if (value === '2080') {
+                target = grid2080
+            } else {
+                target = grid8020
+            }
             w2popup.open({
-                title: 'Historique',
+                title: 'Historique ' + value,
                 with: 600,
                 height: 550,
-                body: `<pre>${JSON.stringify(grid2080.getChanges(), null, 4)}</pre>`,
+                body: `<pre>${JSON.stringify(target.getChanges(), null, 4)}</pre>`,
                 actions: {Ok: w2popup.close}
             })
         }
-        grid2080.stateSave();
-        grid8020.stateSave();
+        window.showAlert = function () {
+            w2alert("Erreur de recuperation de l'UID")
+                .ok(() => {
+                    console.log("Erreur de recuperation de l'UID")
+                })
+        }
     </script>
 {% endblock %}

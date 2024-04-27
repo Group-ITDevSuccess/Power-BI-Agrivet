@@ -27,13 +27,13 @@ class Family(BaseModel):
 
 
 class Hebdo(BaseModel):
-    department = models.ForeignKey('Department', on_delete=models.CASCADE)
-    family = models.ForeignKey('Family', on_delete=models.CASCADE)
+    department = models.ForeignKey('Department', on_delete=models.CASCADE, null=True, blank=True)
+    family = models.ForeignKey('Family', on_delete=models.CASCADE, null=True, blank=True)
     article = models.CharField(max_length=150)
     designation = models.TextField()
     type = models.CharField(max_length=50, choices=(
-        ('Import', 'Import'),
-        ('Local', 'Local'),
+        (1, 'Import'),
+        (2, 'Local'),
     ))
     category = models.CharField(max_length=50, choices=(
         ('2080', '2080'),
