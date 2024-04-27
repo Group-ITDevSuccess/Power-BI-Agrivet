@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="Mise en place de field 2080 8020">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/models.py" afterDir="false" />
+    <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="Rectification de views message">
       <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +150,7 @@
       <workItem from="1714197341378" duration="1234000" />
       <workItem from="1714199411437" duration="1314000" />
       <workItem from="1714201423771" duration="9069000" />
-      <workItem from="1714222781307" duration="25333000" />
+      <workItem from="1714222781307" duration="26096000" />
     </task>
     <task id="LOCAL-00001" summary="Mise en place de ajout">
       <option name="closed" value="true" />
@@ -181,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714233418917</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rectification de views message">
+      <option name="closed" value="true" />
+      <created>1714248693472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714248693472</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +195,8 @@
     <MESSAGE value="Mise en place de ajout" />
     <MESSAGE value="Ajout de Settings de grids" />
     <MESSAGE value="Mise en place de field 2080 8020" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place de field 2080 8020" />
+    <MESSAGE value="Rectification de views message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rectification de views message" />
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [
