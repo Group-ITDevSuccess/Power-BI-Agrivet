@@ -4,8 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="Rectification de views message">
+    <list default="true" id="935ce2c1-221a-4d2d-95f2-b81fe2d7b44b" name="Changes" comment="Fin de rectification sur commit">
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/az-az.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/ba-ba.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/bg-bg.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/ca-es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/da-dk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/de-de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/en-gb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/en-us.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/es-ar.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/es-es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/es-mx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/fr-fr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/gl-es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/hr-hr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/hu-hu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/id-id.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/it-it.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/ja-jp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/kk-kz.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/ko-kr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/lt-lt.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/nl-nl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/no-no.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/pl-pl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/pt-br.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/ru-ru.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/sk-sk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/sl-si.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/sr-rs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/tr-tr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/uk-ua.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/zh-cn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/w2ui/locale/zh-tw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/w2ui/w2ui-2.0.es6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,37 +78,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.Power-BI-Agrivet.executor&quot;: &quot;Run&quot;,
-    &quot;Django Server.core.executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-pythonsecurity.checker&quot;: &quot;pythonsecurity.checker&quot;,
-    &quot;Notification.DoNotAsk-pythonsecurity.checker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Inviso/19 - Clone/Power-BI-Agrivet&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.Power-BI-Agrivet.executor": "Run",
+    "Django Server.core.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-pythonsecurity.checker": "pythonsecurity.checker",
+    "Notification.DoNotAsk-pythonsecurity.checker": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/TSIDIANY R. Muriel/Documents/GitHub/Power Bi AGRIVET/core/static/assets/w2ui",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets\w2ui" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\assets" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates\partials" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\templates" />
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist\js" />
-      <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static\dist" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TSIDIANY R. Muriel\Documents\GitHub\Power Bi AGRIVET\core\static" />
@@ -150,7 +187,8 @@
       <workItem from="1714197341378" duration="1234000" />
       <workItem from="1714199411437" duration="1314000" />
       <workItem from="1714201423771" duration="9069000" />
-      <workItem from="1714222781307" duration="26096000" />
+      <workItem from="1714222781307" duration="26262000" />
+      <workItem from="1714272679966" duration="19963000" />
     </task>
     <task id="LOCAL-00001" summary="Mise en place de ajout">
       <option name="closed" value="true" />
@@ -184,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714248693472</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fin de rectification sur commit">
+      <option name="closed" value="true" />
+      <created>1714249532143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714249532143</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,10 +242,15 @@
     <MESSAGE value="Ajout de Settings de grids" />
     <MESSAGE value="Mise en place de field 2080 8020" />
     <MESSAGE value="Rectification de views message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rectification de views message" />
+    <MESSAGE value="Fin de rectification sur commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin de rectification sur commit" />
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
     {
       "branch": "main",
       "currentBranchFilter": true

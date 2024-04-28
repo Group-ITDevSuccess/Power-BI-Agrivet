@@ -26,6 +26,22 @@ class Family(BaseModel):
         return self.name
 
 
+class Saison(BaseModel):
+    number = models.IntegerField(auto_created=True)
+    archived = models.BooleanField(default=False)
+    qte_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    pmp_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    pdv_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    qte_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    pmp_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    pdv_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    stock_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    stock_prevision = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+
+    def __str__(self):
+        return self.number
+
+
 class Hebdo(BaseModel):
     department = models.ForeignKey('Department', on_delete=models.CASCADE, null=True, blank=True)
     family = models.ForeignKey('Family', on_delete=models.CASCADE, null=True, blank=True)
@@ -39,14 +55,10 @@ class Hebdo(BaseModel):
         ('2080', '2080'),
         ('8020', '8020'),
     ), null=True)
-    qte_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    pmp_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    pdv_pta = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    qte_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    pmp_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    pdv_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    stock_realisation = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
-    stock_prevision = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    saison = models.ManyToManyField('Saison', blank=True)
 
     def __str__(self):
         return self.article
+
+    def has_active_saison(self):
+        return self.saison.filter(archived=False).exists()

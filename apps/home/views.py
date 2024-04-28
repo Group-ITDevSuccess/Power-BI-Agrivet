@@ -21,12 +21,24 @@ def index(request):
 
 @csrf_exempt
 def get_all_hebdo(request):
+    print(request.GET)
     data = json.loads(request.GET.get('request'))
     if request.method == 'GET':
         hebdos = Hebdo.objects.filter(category__iexact=data.get('category')).annotate(
             department_name=F('department__name'),
             family_name=F('family__name'),
-        ).values('uid', 'department_name', 'family_name', 'article', 'designation', 'type', 'qte_pta', 'pmp_pta',
+            qte_pta=F('saison__qte_pta'),
+            pmp_pta=F('saison__pmp_pta'),
+            pdv_pta=F('saison__pdv_pta'),
+            id=F('saison__uid'),
+            qte_realisation=F('saison__qte_realisation'),
+            pmp_realisation=F('saison__pmp_realisation'),
+            pdv_realisation=F('saison__pdv_realisation'),
+            stock_realisation=F('saison__stock_realisation'),
+            stock_prevision=F('saison__stock_prevision'),
+            archived=F('saison__archived')
+        ).values('uid', 'department_name', 'family_name', 'article', 'designation', 'archived', 'type', 'id', 'qte_pta',
+                 'pmp_pta',
                  'pdv_pta',
                  'qte_realisation', 'pmp_realisation', 'pdv_realisation', 'stock_realisation', 'stock_prevision')
         datas = [{key: value for key, value in hebdo.items()} for hebdo in hebdos]
