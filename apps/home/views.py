@@ -20,6 +20,7 @@ def index(request):
 
 
 @csrf_exempt
+@login_required
 def get_all_hebdo(request):
     print(request.GET)
     data = json.loads(request.GET.get('request'))
@@ -49,6 +50,7 @@ def get_all_hebdo(request):
 
 
 @csrf_exempt
+@login_required
 def create_or_update_hebdo(request):
     message = "Invalid Method"
 
@@ -96,6 +98,7 @@ def create_or_update_hebdo(request):
 
 
 @csrf_exempt
+@login_required
 def delete_hebdo_by_uid(request):
     try:
         data = json.loads(request.body)
@@ -112,6 +115,7 @@ def delete_hebdo_by_uid(request):
 
 
 @csrf_exempt
+@login_required
 def generate_uid(request):
     uid = uuid.uuid4()
     data = {

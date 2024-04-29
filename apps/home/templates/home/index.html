@@ -21,6 +21,121 @@
             w2ui
         } from "{% static 'assets/w2ui/w2ui-2.0.es6.min.js' %}";
 
+        let configLocal = {
+            {#"locale": "fr-FR",#}
+            "dateFormat": "dd/mm/yyyy",
+            "timeFormat": "h24",
+            "datetimeFormat": "m/d/yyyy|hh:mi pm",
+            "currencyPrefix": "",
+            "currencySuffix": "",
+            "currencyPrecision": 2,
+            "groupSymbol": " ",
+            "decimalSymbol": ".",
+            "shortmonths": ["Jan", "Fév", "Mar", "Avr", "Mai", "Jui", "Jui", "Aou", "Sep", "Oct", "Nov", "Déc"],
+            "fullmonths": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+            "shortdays": ["L", "M", "M", "J", "V", "S", "D"],
+            "fulldays": ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+            "weekStarts": "M",
+            "phrases": {
+                "${count} letters or more...": "${count} lettres ou plus...",
+                "Add new record": "Ajouter un nouvel enregistrement",
+                "Add New": "Ajouter un nouveau",
+                "Advanced Search": "Recherche avancée",
+                "after": "après",
+                "AJAX error. See console for more details.": "Erreur AJAX. Regardez la console pour plus d'information",
+                "All Fields": "Tous les champs",
+                "All": "All",
+                "Any": "Any",
+                "Are you sure you want to delete ${count} ${records}?": "Etes-vous sur de vouloir supprimer ${count} ${records}?",
+                "Attach files by dragging and dropping or Click to Select": "Affecter les fichiers par un glisser-déposer ou cliquer pour sélectionner",
+                "before": "avant",
+                "begins with": "commence par",
+                "begins": "commence",
+                "between": "entre",
+                "buffered": "mis en mémoire tampon",
+                "Cancel": "Cancel",
+                "Close": "Close",
+                "Column": "Colonne",
+                "Confirmation": "Confirmation",
+                "contains": "contient",
+                "Copied": "Copié",
+                "Copy to clipboard": "Copié dans le press-papier",
+                "Current Date & Time": "Date et Heure actuelle",
+                "Delete selected records": "Supprimer les enregistrements sélectionnés",
+                "Delete": "Supprimer",
+                "Do you want to delete search item \"${item}\"?": "Voulez-vous supprimer l'objet recherché \"${item}\"?",
+                "Edit selected record": "Editer l'enregistrements sélectionné",
+                "Edit": "Editer",
+                "Empty list": "Liste vide",
+                "ends with": "se termine par",
+                "ends": "se termine",
+                "Field should be at least ${count} characters.": "Le champ doit contenir au moins ${count} caractères.",
+                "Hide": "Cacher",
+                "in": "dans",
+                "is not": "n'est pas",
+                "is": "est",
+                "less than": "moins que",
+                "Line #": "Ligne #",
+                "Load ${count} more...": "Charger ${count} de plus...",
+                "Loading...": "Chargement...",
+                "Maximum number of files is ${count}": "Le nombre maximum de fichier est de ${count}",
+                "Maximum total size is ${count}": "La taille maximale est de ${count}",
+                "Modified": "Modifié",
+                "more than": "plus que",
+                "Multiple Fields": "Champs multiples",
+                "Name": "Nom",
+                "No items found": "Aucune donnée trouvée",
+                "No matches": "Aucun résultat",
+                "No": "Non",
+                "none": "rien",
+                "Not a float": "Ce n'est pas un nombre à virgule",
+                "Not a hex number": "Ce n'est pas un nombre en hexadécimal",
+                "Not a valid date": "Ce n'est pas une date",
+                "Not a valid email": "Ce n'est pas une adresse de courriel",
+                "Not alpha-numeric": "Le contenu n'est pas alphanumérique",
+                "Not an integer": "Ce n'est pas un entier",
+                "Not in money format": "Ce n'est pas une monnaie",
+                "not in": "pas dans",
+                "Notification": "Message",
+                "of": "de",
+                "Ok": "Ok",
+                "Opacity": "Opacity",
+                "Record ID": "Id de l'enregistrement",
+                "record": "enregistrement",
+                "records": "enregistrements",
+                "Refreshing...": "Rechargement...",
+                "Reload data in the list": "Recharger les données de la liste",
+                "Remove": "Supprimer",
+                "Remove This Field": "Supprimer ce champ",
+                "Request aborted.": "Requête annulée.",
+                "Required field": "Champ obligatoire",
+                "Reset": "Réinitialiser",
+                "Restore Default State": "Restaurer l'état par défaut",
+                "Returned data is not in valid JSON format.": "Les données retournées ne sont pas dans un format JSON valide",
+                "Save changed records": "Sauvegarder les enregistrements modifiés",
+                "Save Grid State": "Enregistrer l'état de la grille",
+                "Save": "Sauvegarder",
+                "Saved Searches": "Recherches sauvegardée",
+                "Saving...": "Sauvegarde en cours...",
+                "Search took ${count} seconds": "La recherche a pris ${count} secondes",
+                "Search": "Rechercher",
+                "Select Hour": "Sélectionner une heure",
+                "Select Minute": "Sélectionner les minutes",
+                "selected": "sélectionné",
+                "Server Response ${count} seconds": "Le serveur a répondu en ${count} secondes",
+                "Show/hide columns": "Montrer/cacher les colonnes",
+                "Show": "Montrer",
+                "Size": "Taille",
+                "Skip": "Passer",
+                "Sorting took ${count} seconds": "Le triage à pris ${count} secondes",
+                "Type to search...": "Ecrire pour rechercher...",
+                "Type": "Type",
+                "Yes": "Oui",
+                "Yesterday": "Hier",
+                "Your remote data source record count has changed, reloading from the first record.": "Le nombre d'enregistrements de votre source de données distante a changé, rechargement à partir du premier enregistrement."
+            }
+        }
+
         let semaineActuel = 16
         let typeHebdo = [
             {id: 1, text: 'Import'},
@@ -43,11 +158,11 @@
                 recid: 'uid',
                 method: 'GET',
                 autoLoad: true,
+                advanceOnEdit: true,
                 liveSearch: true,
                 multiSearch: true,
                 multiSelect: true,
-                keyboard: true,
-                reorderRows: false,
+                showExtraOnSearch: 1,
                 header: 'Liste des ' + value,
                 msgNotJSON: "Les données reçu n'est pas en JSON",
                 msgEmpty: 'Aucun donnée',
@@ -69,27 +184,23 @@
                         type: 'button',
                         text: w2utils.lang('Ajouter'),
                         tooltip: w2utils.lang('Ajouter une ligne'),
-                        img: 'icon-add'
                     },
                     'edit': {
                         type: 'button',
                         text: w2utils.lang('Modifier'),
                         tooltip: w2utils.lang("Modifier la ligne"),
-                        img: 'icon-edit',
                         disabled: true
                     },
                     'delete': {
                         type: 'button',
                         text: w2utils.lang('Supprimer'),
                         tooltip: w2utils.lang("Supprimer l'enregistrement"),
-                        img: 'icon-delete',
                         disabled: true
                     },
                     'save': {
                         type: 'button',
                         text: w2utils.lang('Enregistrer'),
                         tooltip: w2utils.lang('Sauvegarder tous les lignes'),
-                        img: 'icon-save'
                     }
                 },
                 show: {
@@ -119,152 +230,67 @@
                     statusResponse: true,
                     statusSearch: true,
                 },
+                operatorsMap: {
+                    'text': 'text',
+                    'int': 'number',
+                    'float': 'number',
+                    'money': 'number',
+                    'currency': 'number',
+                    'percent': 'number',
+                    'hex': 'hex',
+                    'alphanumeric': 'text',
+                    'color': 'color',
+                    'date': 'date',
+                    'time': 'date',
+                    'datetime': 'date',
+                    'list': 'list',
+                    'combo': 'text',
+                    'enum': 'enum',
+                    'file': 'enum',
+                    'select': 'list',
+                    'radio': 'list',
+                    'checkbox': 'list',
+                    'toggle': 'list'
+                },
+                searchMap: {
+                    department_name: 'department',
+                    family_name: 'family',
+                    article: 'article',
+                    designation: 'designation',
+                },
                 columnTooltip: 'bottom',
-                tooltip: w2utils.locale({
-    "locale": "fr-FR",
-    "dateFormat": "dd/mm/yyyy",
-    "timeFormat": "h24",
-    "datetimeFormat": "m/d/yyyy|hh:mi pm",
-    "currencyPrefix": "",
-    "currencySuffix": "",
-    "currencyPrecision": 2,
-    "groupSymbol": ",",
-    "decimalSymbol": ".",
-    "shortmonths": [ "Jan", "Fév", "Mar", "Avr", "Mai", "Jui", "Jui", "Aou", "Sep", "Oct", "Nov", "Déc" ],
-    "fullmonths": [ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" ],
-    "shortdays": [ "L", "M", "M", "J", "V", "S", "D" ],
-    "fulldays": [ "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche" ],
-    "weekStarts": "M",
-    "phrases": {
-        "${count} letters or more...": "${count} lettres ou plus...",
-        "Add new record": "Ajouter un nouvel enregistrement",
-        "Add New": "Ajouter un nouveau",
-        "Advanced Search": "Recherche avancée",
-        "after": "après",
-        "AJAX error. See console for more details.": "Erreur AJAX. Regardez la console pour plus d'information",
-        "All Fields": "Tous les champs",
-        "All": "All",
-        "Any": "Any",
-        "Are you sure you want to delete ${count} ${records}?": "Etes-vous sur de vouloir supprimer ${count} ${records}?",
-        "Attach files by dragging and dropping or Click to Select": "Affecter les fichiers par un glisser-déposer ou cliquer pour sélectionner",
-        "before": "avant",
-        "begins with": "commence par",
-        "begins": "commence",
-        "between": "entre",
-        "buffered": "mis en mémoire tampon",
-        "Cancel": "Cancel",
-        "Close": "Close",
-        "Column": "Colonne",
-        "Confirmation": "Confirmation",
-        "contains": "contient",
-        "Copied": "Copié",
-        "Copy to clipboard": "Copié dans le press-papier",
-        "Current Date & Time": "Date et Heure actuelle",
-        "Delete selected records": "Supprimer les enregistrements sélectionnés",
-        "Delete": "Supprimer",
-        "Do you want to delete search item \"${item}\"?": "Voulez-vous supprimer l'objet recherché \"${item}\"?",
-        "Edit selected record": "Editer l'enregistrements séléctionné",
-        "Edit": "Editer",
-        "Empty list": "Liste vide",
-        "ends with": "se termine par",
-        "ends": "se termine",
-        "Field should be at least ${count} characters.": "Le champ doit contenir au moins ${count} caractères.",
-        "Hide": "Cacher",
-        "in": "dans",
-        "is not": "n'est pas",
-        "is": "est",
-        "less than": "moins que",
-        "Line #": "Ligne #",
-        "Load ${count} more...": "Charger ${count} de plus...",
-        "Loading...": "Chargement...",
-        "Maximum number of files is ${count}": "Le nombre maximum de fichier est de ${count}",
-        "Maximum total size is ${count}": "La taille maximale est de ${count}",
-        "Modified": "Modifié",
-        "more than": "plus que",
-        "Multiple Fields": "Champs multiples",
-        "Name": "Nom",
-        "No items found": "Aucune donnée trouvée",
-        "No matches": "Aucun résultat",
-        "No": "Non",
-        "none": "rien",
-        "Not a float": "Ce n'est pas un nombre à virgule",
-        "Not a hex number": "Ce n'est pas un nombre en hexadécimal",
-        "Not a valid date": "Ce n'est pas une date",
-        "Not a valid email": "Ce n'est pas une adresse de courriel",
-        "Not alpha-numeric": "Le contenu n'est pas alphanumérique",
-        "Not an integer": "Ce n'est pas un entier",
-        "Not in money format": "Ce n'est pas une monnaie",
-        "not in": "pas dans",
-        "Notification": "Message",
-        "of": "de",
-        "Ok": "Ok",
-        "Opacity": "Opacity",
-        "Record ID": "Id de l'enregistrement",
-        "record": "enregistrement",
-        "records": "enregistrements",
-        "Refreshing...": "Rechargement...",
-        "Reload data in the list": "Recharger les données de la liste",
-        "Remove": "Supprimer",
-        "Remove This Field": "Supprimer ce champ",
-        "Request aborted.": "Requête annulée.",
-        "Required field": "Champ obligatoire",
-        "Reset": "Réinitialiser",
-        "Restore Default State": "Restaurer l'état par défaut",
-        "Returned data is not in valid JSON format.": "Les données retournées ne sont pas dans un format JSON valide",
-        "Save changed records": "Sauvegarder les enregistrements modifiés",
-        "Save Grid State": "Enregistrer l'état de la grille",
-        "Save": "Sauvegarder",
-        "Saved Searches": "Recherches sauvegardée",
-        "Saving...": "Sauvegarde en cours...",
-        "Search took ${count} seconds": "La recherche a pris ${count} secondes",
-        "Search": "Rechercher",
-        "Select Hour": "Sélectionner une heure",
-        "Select Minute": "Sélectionner les minutes",
-        "selected": "selectionné",
-        "Server Response ${count} seconds": "Le serveur a répondu en ${count} secondes",
-        "Show/hide columns": "Montrer/cacher les colonnes",
-        "Show": "Montrer",
-        "Size": "Taille",
-        "Skip": "Passer",
-        "Sorting took ${count} seconds": "Le triage à pris ${count} secondes",
-        "Type to search...": "Ecrire pour rechercher...",
-        "Type": "Type",
-        "Yes": "Oui",
-        "Yesterday": "Hier",
-        "Your remote data source record count has changed, reloading from the first record.": "Le nombre d'enregistrements de votre source de données distante a changé, rechargement à partir du premier enregistrement."
-    }
-}),
+                tooltip: w2utils.locale(configLocal),
                 searches: [
                     {type: 'text', field: 'department_name', label: 'Département'},
                     {type: 'text', field: 'family_name', label: 'Famille'},
                     {type: 'text', field: 'article', label: 'Article'},
                     {type: 'text', field: 'designation', label: 'Désignation'},
-                    {
-                        field: 'type', text: 'Import/Local', type: 'list',
-                        options: {
-                            items: typeHebdo
-                        }
-                    },
                 ],
                 columnGroups: [
-                    {#{text: '', master: true},#}
-                    {text: 'INFORMATION', span: 5, frozen: true},
-                    {text: 'PTA', span: 6},
-                    {text: 'Réalisation ', span: 6}
+                    {text: '', main: true},
+                    {text: '', main: true},
+                    {text: 'INFORMATION', span: 3, style: "background-color: green; color: #fff", frozen: true},
+                    {text: 'PTA', style: "background-color: #FFC000; color: #fff;", span: 6,},
+                    {text: 'REALISATION ', style: "background-color: #5B9BD5; color: #fff;", span: 6},
+                    {text: 'VARIATION ', style: "background-color: #A5A5A5; color: #fff;", span: 6},
                 ],
                 toolbar: {
                     items: [
-                        {type: 'button', id: 'showChanges_' + value, text: 'Historique'},
                         {type: 'break', id: 'break_' + value},
                         {
                             type: 'radio',
-                            group: value,
                             checked: true,
+                            title: 'Semaine Actuel',
                             id: 'S' + semaineActuel,
                             text: 'S' + semaineActuel + ' (Actuel)',
                             icon: 'fas fa-calendar-alt'
                         },
                         {type: 'break', id: 'break_' + value},
+                        {
+                            type: 'group',
+                            id: 'group_' + value,
+                            style: 'margin: -2px 3px; padding: 1px; border-radius: 4px; border: #9bb5ff; border-width: 1px 2px; border-style: solid;'
+                        }
                     ],
                     async onRender(event) {
                         await event.complete
@@ -272,22 +298,16 @@
                             this.remove('S' + i)
                         }
                         for (let i = semaineActuel - 1; i > 0; i--) {
-                            this.add({
+                            this.insert('group_' + value, {
                                 type: 'radio',
-                                group: value,
                                 id: 'S' + i,
                                 text: 'S' + i,
                                 icon: 'fas fa-calendar-alt'
                             })
                         }
                     },
-                    onDestroy: function (event) {
-                        console.log('object ' + event.target + ' is destroyed');
-                    },
                     onClick(event) {
-                        if (event.target === 'showChanges_' + value) {
-                            showChanged(value)
-                        } else if (
+                        if (
                             event.target !== 'w2ui-add' &&
                             event.target !== 'w2ui-column-on-off' &&
                             event.target !== 'w2ui-reload' &&
@@ -305,7 +325,7 @@
                                 category: `${value}`,
                                 section: event.target
                             }
-                            data.reload("{% url 'home:get_all_hebdo' %}")
+                            data.reload()
                             w2utils.notify(`Hebdo "${event.detail.item.text}" Sélectionnez`)
                         }
 
@@ -330,8 +350,8 @@
                             event.owner.editField(uid, 0)
                         })
                         .catch(error => {
-                            console.error("Error deleting Breakdown:", error);
-                            showAlert()
+                            showAlert("Erreur de recuperation de l'ID de la ligne !")
+                            console.log(error)
                         });
                 },
                 columns: [
@@ -379,12 +399,12 @@
                     {
                         field: 'type',
                         text: 'Import / Local',
-                        size: '100px',
+                        size: '75px',
                         sortable: true,
                         resizable: true,
                         frozen: true,
                         editable: {
-                            type: 'list', items: typeHebdo, showAll: true, openOnFocus: true, align: 'left'
+                            type: 'list', items: typeHebdo, showAll: true, openOnFocus: true, align: 'right'
                         },
                         render(record, extra) {
                             switch (parseInt(extra.value)) {
@@ -403,7 +423,14 @@
                         text: 'Qté',
                         size: '100px',
                         align: 'right',
-                        editable: {type: 'money'},
+                        editable: {
+                            type: 'money',
+                            currencyPrefix: "",
+                            currencySuffix: "",
+                            currencyPrecision: 2,
+                            groupSymbol: " ",
+                            decimalSymbol: ".",
+                        },
                         render: 'money'
                     },
                     {
@@ -616,7 +643,7 @@
                             break
                         case 'html':
                             layout.html('main', '<div style="padding: 10px">Page de Synthèse</div>')
-                            query(layout.el('main')).css('border-left', '1px solid #efefef')
+                            query(layout.el('main')).removeClass('w2ui-grid').css('border-left', '1px solid #efefef')
                             break
                     }
                 }
@@ -654,11 +681,12 @@
                 actions: {Ok: w2popup.close}
             })
         }
-        window.showAlert = function () {
-            w2alert("Erreur de recuperation de l'UID")
+        window.showAlert = function (message) {
+            w2alert(message)
                 .ok(() => {
-                    console.log("Erreur de recuperation de l'UID")
+                    console.log(message)
                 })
         }
+
     </script>
 {% endblock %}
